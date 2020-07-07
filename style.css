@@ -1,0 +1,158 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.light {
+  background-color: white;
+}
+
+.dark {
+  background-color: #313131;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: rgb(71, 71, 2);
+  font-family: "Montserrat", sans-serif;
+  z-index: 0;
+}
+
+.sliderWrapper {
+  display: inline-block; /* disply horizontal */
+  position: relative;
+}
+
+.sliderWrapper div {
+  display: inline-block;
+}
+
+.darkmodeswitch {
+  vertical-align: middle;
+  position: relative;
+  width: 90px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.darkmodeswitch-checkbox {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.darkmodeswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #999999;
+  border-radius: 20px;
+}
+.darkmodeswitch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.1s ease-in 0s;
+}
+.darkmodeswitch-inner:before,
+.darkmodeswitch-inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 30px;
+  padding: 0;
+  line-height: 30px;
+  font-size: 14px;
+  color: white;
+  font-family: Trebuchet, Arial, sans-serif;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+.darkmodeswitch-inner:before {
+  content: "";
+  padding-left: 10px;
+  background-color: #000000;
+  color: #ffffff;
+}
+.darkmodeswitch-inner:after {
+  content: "";
+  padding-right: 10px;
+  background-color: #eeeeee;
+  color: #999999;
+  text-align: right;
+}
+.darkmodeswitch-switch {
+  display: block;
+  width: 22px;
+  margin: 6px;
+  background: #000000;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 56px;
+  border-radius: 50%;
+  transition: all 0.1s ease-in 0s;
+}
+
+.darkmodeswitch-checkbox:checked + .darkmodeswitch-label .darkmodeswitch-inner {
+  margin-left: 0;
+}
+.darkmodeswitch-checkbox:checked
+  + .darkmodeswitch-label
+  .darkmodeswitch-switch {
+  right: 0px;
+}
+
+.darkmodeswitch-checkbox:checked
+  + .darkmodeswitch-label
+  .darkmodeswitch-switch {
+  background: #ffffff;
+}
+
+.display {
+  /* background: red; */
+  width: 800px;
+  height: 500px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 100px;
+  margin-bottom: auto;
+}
+
+.time-display {
+  /* background: #f5f5dc; */
+  height: 60%;
+}
+
+.time-display-text {
+  font-size: 500%;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 10%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.fact-display {
+  /* background: chartreuse; */
+  height: 40%;
+  font-size: 200%;
+  text-align: center;
+  padding-top: 5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* dark mode */
+.time-display-darkmode {
+  border-bottom: 4px dotted white;
+}
+.time-display-text-darkmode {
+  color: white;
+}
+
+/* dark mode */
+.fact-display-darkmode {
+  color: white;
+}
