@@ -1,6 +1,0 @@
-Shows current time
-Has dark mode
-Depending on hr, a quote/fact
-shows up.
-
-
